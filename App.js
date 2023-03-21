@@ -15,6 +15,9 @@ import { EvaIconsPack } from "@ui-kitten/eva-icons";
 
 import MapScreen from "./screens/MapScreen";
 import FeedScreen from "./screens/FeedScreen";
+import CreatePostScreen from "./screens/CreatePostScreen";
+import StatsScreen from "./screens/StatsScreen";
+import ProfileScreen from "./screens/ProfileScreen";
 
 const { Navigator, Screen } = createBottomTabNavigator();
 
@@ -25,6 +28,9 @@ const BottomTabBar = ({ navigation, state }) => (
   >
     <BottomNavigationTab title="MAP" />
     <BottomNavigationTab title="FEED" />
+    <BottomNavigationTab title="ADD" />
+    <BottomNavigationTab title="STATS" />
+    <BottomNavigationTab title="PROFILE" />
   </BottomNavigation>
 );
 
@@ -37,6 +43,9 @@ const TabNavigator = () => (
   >
     <Screen name="Map" component={MapScreen} />
     <Screen name="Feed" component={FeedScreen} />
+    <Screen name="Add" component={CreatePostScreen} />
+    <Screen name="Stats" component={StatsScreen} />
+    <Screen name="Profile" component={ProfileScreen} />
   </Navigator>
 );
 
